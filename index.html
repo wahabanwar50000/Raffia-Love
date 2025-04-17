@@ -2,27 +2,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raffia Sorry</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raffia Sorry</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="background"></div>
+  <div class="background"></div>
 
-    <div class="content">
-        <h1>I'm Sorry, Raffia</h1>
-        <p>My Queen, I never meant to hurt you. You mean the world to me and I’ll do anything to make things right.</p>
-        <p>This is not just a website. It’s my heart on display. Please forgive me, and let’s build dreams together again.</p>
-        <a href="gallery.html">See Our Memories</a>
-    </div>
+  <div class="content">
+    <h1>I'm Sorry, Raffia</h1>
+    <p>My Queen, I never meant to hurt you. You mean the world to me and I’ll do anything to make things right.</p>
+    <p>This is not just a website. It’s my heart on display. Please forgive me, and let’s build dreams together again.</p>
+    <a href="gallery.html">See Our Memories</a>
+  </div>
 
-    <!-- Audio Element (hidden) -->
-    <audio id="bgAudio" loop style="display: none;">
-        <source src="whatsapp-audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+  <!-- Audio Element -->
+  <audio id="bgAudio" loop>
+    <source src="whatsapp-audio.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-    <!-- Button to play audio -->
-    <button onclick="document.getElementById('bgAudio').play(); this.style.display='none';">
-        Play Audio
+  <!-- Button -->
+  <button onclick="playAudio()">Play Audio</button>
+
+  <!-- JS Script -->
+  <script>
+    function playAudio() {
+      const audio = document.getElementById('bgAudio');
+      audio.play().then(() => {
+        console.log("Audio is playing");
+      }).catch(error => {
+        console.error("Error playing audio:", error);
+        alert("Couldn't play the audio. Please check the file name and format.");
+      });
+    }
+  </script>
+</body>
+</html>
