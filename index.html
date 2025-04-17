@@ -4,39 +4,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raffia Sorry</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>For My Love</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fbd3e9, #bb377d);
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    .audio-button {
+      margin-top: 30px;
+      background-color: white;
+      color: #bb377d;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .audio-button:hover {
+      background-color: #fbd3e9;
+      color: #fff;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <div class="background"></div>
 
-  <div class="content">
-    <h1>I'm Sorry, Raffia</h1>
-    <p>My Queen, I never meant to hurt you. You mean the world to me and I’ll do anything to make things right.</p>
-    <p>This is not just a website. It’s my heart on display. Please forgive me, and let’s build dreams together again.</p>
-    <a href="gallery.html">See Our Memories</a>
-  </div>
+  <h1>For My Love</h1>
+  <p>This song says what I feel for you...</p>
 
-  <!-- Audio Element -->
-  <audio id="bgAudio" loop>
-    <source src="whatsapp-audio.mp3" type="audio/mpeg" />
+  <button class="audio-button" onclick="document.getElementById('audio').play()">Play Audio</button>
+
+  <audio id="audio" controls>
+    <source src="if the world was ending i'd wanna be next to you  #lyrics #music #brunomars #viralshorts #shorts.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <!-- Button -->
-  <button onclick="playAudio()">Play Audio</button>
-
-  <!-- JS Script -->
-  <script>
-    function playAudio() {
-      const audio = document.getElementById('bgAudio');
-      audio.play().then(() => {
-        console.log("Audio is playing");
-      }).catch(error => {
-        console.error("Error playing audio:", error);
-        alert("Couldn't play the audio. Please check the file name and format.");
-      });
-    }
-  </script>
 </body>
 </html>
