@@ -9,19 +9,20 @@
 </head>
 <body>
     <div class="background"></div>
+
     <div class="content">
         <h1>I'm Sorry, Raffia</h1>
-        <p>My Gemini Queen, I never meant to hurt you. You mean the world to me and I’ll do anything to bring back your smile.</p>
-        <p>This is not just a website. It’s my heart on display. Please forgive me, and let’s build our forever together.</p>
+        <p>My Queen, I never meant to hurt you. You mean the world to me and I’ll do anything to make things right.</p>
+        <p>This is not just a website. It’s my heart on display. Please forgive me, and let’s build dreams together again.</p>
         <a href="gallery.html">See Our Memories</a>
     </div>
-    <audio autoplay loop>
-  <source src="WhatsApp%20Audio%202025-04-18%20at%2012.20.06%20AM.mpeg" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
-<button onclick="document.getElementById('bgAudio').play(); this.style.display='none'">
-  Play Audio
-</button>
-</body>
-</html>
+    <!-- Audio Element (hidden) -->
+    <audio id="bgAudio" loop style="display: none;">
+        <source src="whatsapp-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Button to play audio -->
+    <button onclick="document.getElementById('bgAudio').play(); this.style.display='none';">
+        Play Audio
