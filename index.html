@@ -48,12 +48,22 @@
   <h1>For My Love</h1>
   <p>This song says what I feel for you...</p>
 
-  <button class="audio-button" onclick="document.getElementById('audio').play()">Play Audio</button>
+  <button class="audio-button" onclick="playAudio()">Play Audio</button>
 
-  <audio id="audio" controls>
-    <source src="if the world was ending i'd wanna be next to you  #lyrics #music #brunomars #viralshorts #shorts.mp3" type="audio/mpeg">
+  <audio id="audio" preload="auto">
+    <source src="audio.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+
+  <script>
+    function playAudio() {
+      const audio = document.getElementById("audio");
+      audio.play().catch(error => {
+        alert("User interaction required or audio could not be played.");
+        console.log(error);
+      });
+    }
+  </script>
 
 </body>
 </html>
